@@ -1,0 +1,11 @@
+/etc/init.d/networking restart
+
+echo -e "150.0.0.250 s2" >> /etc/hosts
+
+echo -e '\n\n\n' | ssh-keygen
+cp /root/.ssh/id_rsa.pub /shared
+
+# We have to manually create the tun interface for this kathara image
+mkdir -p /dev/net
+mknod /dev/net/tun c 10 200
+chmod 600 /dev/net/tun

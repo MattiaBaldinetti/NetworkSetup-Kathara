@@ -1,0 +1,26 @@
+The command for the pt. 13 is in the file commands.txt
+
+# SSH Command
+from pc1:
+    ssh myuser2@s2
+    yes
+    password (disabled)
+
+
+# VPN Command
+from pc1 and pc2:
+    cd /root
+    openvpn client.conf
+    password
+
+
+from s1:
+    cd /root
+    openvpn server.conf
+    password
+
+
+
+
+
+
